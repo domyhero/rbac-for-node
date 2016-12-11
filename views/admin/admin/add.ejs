@@ -1,0 +1,87 @@
+<% include ../layout/layout.ejs %>
+
+<body>
+<div class="panel admin-panel">
+  <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>增加管理员</strong></div>
+  <div class="body-content">
+
+    <form method="post" class="form-x" action="/admin/user/add">
+
+      <div class="form-group">
+        <div class="label">
+          <label>用户名：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" value="" name="username" data-validate="required:请输入用户名" />
+          <div class="tips"></div>
+        </div>
+      </div>   
+      
+        <div class="form-group">
+          <div class="label">
+            <label>所属角色：</label>
+          </div>
+          <div class="field">
+            <select name="role_id" class="input w50">
+              <option value="0">请选择角色</option>
+              <option value="1">管理员</option>
+            </select>
+            <div class="tips"></div>
+          </div>
+        </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label for="sitename">密码：</label>
+        </div>
+        <div class="field">
+          <input type="password" class="input w50" name="password" size="50" placeholder="请输入密码" data-validate="required:请输入密码,length#>=5:密码不能小于5位" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>邮箱：</label>
+        </div>
+        <div class="field">
+          <input type="email" class="input w50" value="" name="mail" data-validate="required:请输入邮箱" />
+          <div class="tips"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>手机：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" value="" name="phone" data-validate="required:请输入手机" />
+          <div class="tips"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>描述：</label>
+        </div>
+        <div class="field">
+          <textarea class="input" name="desc" style=" height:90px;"></textarea>
+          <div class="tips"></div>
+        </div>
+      </div>
+     
+      <div class="clear"></div>
+      <div class="form-group">
+        <div class="label">
+          <label></label>
+        </div>
+        <div class="field">
+          <button class="button bg-main icon-check-square-o" type="submit"> 提交</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+</body>
+</html>
